@@ -1,99 +1,37 @@
-import { useState } from "react";
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
-  signOut,
-} from "firebase/auth";
-import "./App.css";
-import { auth } from "./firebase-config";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import WelcomePage from "./pages/welcome";
+import SignUpPage from "./pages/signup";
+import LoginPage from "./pages/login";
+import DashboardPage from "./pages/dashboard";
+import DashboardForm from "./pages/dashboardForm";
+import UsersPage from "./pages/users";
+import UserPage from "./pages/user";
+import NotFoundPage from "./pages/NotFound";
 
-function App() {
-  const [registerEmail, setRegisterEmail] = useState("");
-  const [registerPassword, setRegisterPassword] = useState("");
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
+import Navbar from "./components/Navbar";
 
-  const [user, setUser] = useState({});
-
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
-
-  const register = async () => {
-    try {
-      const user = await createUserWithEmailAndPassword(
-        auth,
-        registerEmail,
-        registerPassword
-      );
-      console.log(user);
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-
-  const login = async () => {
-    try {
-      const user = await signInWithEmailAndPassword(
-        auth,
-        loginEmail,
-        loginPassword
-      );
-      console.log(user);
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
-
-  const logout = async () => {
-    await signOut(auth);
-  };
-
+export default function App() {
   return (
-    <div className="App">
-      <div>
-        <h3> Register User </h3>
-        <input
-          placeholder="Email..."
-          onChange={(event) => {
-            setRegisterEmail(event.target.value);
-          }}
-        />
-        <input
-          placeholder="Password..."
-          onChange={(event) => {
-            setRegisterPassword(event.target.value);
-          }}
-        />
+    <BrowserRouter>
 
-        <button onClick={register}> Create User</button>
-      </div>
+      <Navbar />
 
-      <div>
-        <h3> Login </h3>
-        <input
-          placeholder="Email..."
-          onChange={(event) => {
-            setLoginEmail(event.target.value);
-          }}
-        />
-        <input
-          placeholder="Password..."
-          onChange={(event) => {
-            setLoginPassword(event.target.value);
-          }}
-        />
+      <Routes>
+        <Route path="/" element={<WelcomePage/>}/>
+        <Route path="/signup" element={<SignUpPage/>}/>
+        <Route path="/login" element={<LoginPage/>}/>
+        <Route path="/users" element={<UsersPage/>}/>
+        <Route path="/usuarios" element={<Navigate to="/users"/>}/>
+        <Route path="/users/:id" element={<UserPage/>}/>
+        <Route path="/dashboard/*" element={<DashboardPage/>}>
+          <Route path="welcome" element={<p>welcome!!!</p>}/>
+          <Route path="goodbye" element={<p>goodbye!!!</p>}/>
+        </Route>
+        <Route path="/dashboard-form" element={<DashboardForm/>}/>
+        <Route path="*" element={<NotFoundPage/>}/>
+      </Routes>
 
-        <button onClick={login}> Login</button>
-      </div>
+    </BrowserRouter>
 
-      <h4> User Logged In: </h4>
-      {user?.email}
-
-      <button onClick={logout}> Sign Out </button>
-    </div>
-  );
+  )
 }
-
-export default App;
