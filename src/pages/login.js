@@ -1,11 +1,9 @@
+// import resgisterIcon from "./registerIcon.svg"
 
-import "./App.css";
-
-import resgisterIcon from "./registerIcon.svg"
-
-
-
-    <div className="App">
+export default function LoginPage() {
+  return (
+    <div> Login </div>
+/*<div className="App">
       <div class="register-container">
       <img src={resgisterIcon} alt="register-icon"></img>
         <h1> Welcome back</h1>
@@ -35,7 +33,6 @@ import resgisterIcon from "./registerIcon.svg"
         <button onClick={register}>Continue with Google</button>
       </div>
 
-    </div>
-
-
-
+    </div>*/
+  )
+}
