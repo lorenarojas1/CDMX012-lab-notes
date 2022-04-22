@@ -1,26 +1,25 @@
-import { Link, useNavigate, Outlet } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import plusIcon from "../img/plusIcon.svg";
+    
 
 export default function DashboardPage() {
 
-    const navigate = useNavigate();
+   // const navigate = useNavigate();
 
-    const handleClick = () => {
-        navigate('/');
-    }
 
     return (
-        <div> 
-            <h1>Dashboard</h1>
+        <div class="container-dashboard">
+        <div class="container-notes">
 
-            <button on onClick={handleClick}>
-                Logout
+        </div>
+
+            <button>
+                <img class="plus-icon" src={plusIcon} alt="plus-icon"/>
             </button>
 
-            <Outlet/>
 
-            <Link to='welcome'>Say welcome</Link>
-            <br/>
-            <Link to='goodbye'>Say goodbye</Link>
+
+
         </div>
     )
 }

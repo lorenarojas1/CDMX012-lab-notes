@@ -1,53 +1,202 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+html{
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*-----WELCOME----*/
+.container-welcome{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-image: url(./img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.box-container{
+  width: 80%;
+  background: rgba(255, 255, 255, 0.4);
+  mix-blend-mode: normal;
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  margin: 20px 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.girl-image{
+  width: 350px;
+  height: 350px;
+  position: relative;
+}
+.descriptionWelcome{
+  color: #FFFFFF;
+  font-size: 2em;
+  margin-top: -20px;
+  padding: 5px 10px 5px 10px;
+}
+.box-buttons{
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 20px 10px;
+}
+.titleWelcome{
+  color: #874356;
+  font-size: 1.8em;
+  text-align: center;
+}
+.orText{
+  color: #C65D7B;
+  font-weight: bolder;
+}
+.btn-form{
+  width: 80%;
+  color: #FFFFFF;
+  font-size: 18px;
+  background: #C65D7B;
+  box-shadow: 0px -1px 2px rgba(255, 255, 255, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 21px;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+}
+.btn-google{
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  color: #C65D7B;
+  font-size: 12px;
+  font-weight: bolder;
+  background: #EAEAEA;
+  box-shadow: 0px -1px 2px rgba(255, 255, 255, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 21px;
+  border: 1px solid gray;
+  padding: 5px;
+  margin-top: 10px;
+}
+.icon-google{
+  width: 35px;
+  height: 35px;
 }
 
-.App-link {
-  color: #61dafb;
+/*-----LOGIN----*/
+.container-login{
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .register-container{
-  width: 50%;
-  height: fit-content;
-  border: 1px solid #C65D7B;
-  border-radius: 10px;
+  width: 80%;
   padding: 20px;
-  position: absolute;
-  top: 50px;
-  left: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.back-icon{
+  width: 50px;
+  height: 50px;
+  align-self: flex-start;
+}
+.mid-icon{
+  width: 150px;
+  height: 150px;
+  margin: 15px 0;
+}
+h1{
+  color: #C65D7B;
+  margin: 10px 0;
+}
+h3{
+  color: #8B8B8B;
+  margin-bottom: 20px;
 }
 
-.container-principal{
-  background-color: #61dafb;
+.icon{
+  width: 30px;
+  height: 30px;
+  padding: 5px 10px;
+}
+.box-form{
+  background: #F6E7D8;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 3px;
+  margin: 5px 0;
+
+}
+.input-form{
+  color:#874356;
+  font-size: 14px;
+  border: none;
+  background-color: #F6E7D8;
+  height: 100%;
+}
+.input-form::placeholder{
+  color:#874356;
+  font-size: 16px;
+}
+.input-form:focus{
+  outline:none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.option-password{
+  color: #874356;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 14px;
+}
+.link-ref{
+  color: #F68989;
+  font-weight: bolder;
+  justify-items: flex-end;
+}
+.paragraph{
+  color: #8B8B8B;
+}
+.link-signup{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+/*-----DASHBOARD----*/
+.container-dashboard{
+  background-color: #F6E7D8;
+  min-height: 770px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+.container-notes{
+  width: 100%;
+}
+.plus-icon{
+  width: 60px;
+  height: 60px;
+  margin: 10px;
 }

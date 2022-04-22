@@ -7,11 +7,12 @@ import DashboardForm from "./pages/dashboardForm";
 import UsersPage from "./pages/users";
 import UserPage from "./pages/user";
 import NotFoundPage from "./pages/NotFound";
-
 import Navbar from "./components/Navbar";
 
 export default function App() {
+
   return (
+
     <BrowserRouter>
 
       <Navbar />

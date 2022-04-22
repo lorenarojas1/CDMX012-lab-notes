@@ -1,9 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import girlIcon from "../img/girlIcon.svg";
 import googleIcon from "../img/googleIcon.svg";
 import "../App.css"
-
-const userId = 10;
 
 export default function WelcomePage() {
 
@@ -16,21 +14,21 @@ export default function WelcomePage() {
         navigate('/signup');
     }
     return (
-        <div class="container-principal">
+        <div class="container-welcome">
             <section class="box-container">
-            <img src={girlIcon} alt="girl-icon"></img>
-                <h2>The best app for <br/> organize your <br/> day...</h2>
-                <div>
-                <h1>JOIN OUR <br/> TEAM</h1>
-                    <button on onClick={loginClick}>Login</button>
-                    <p>------------- or ---------------</p>
-                    <button on onClick={signupClick}>Sign up</button>
+            <img class="girl-image"src={girlIcon} alt="girl-icon"></img>
+                <p class="descriptionWelcome">The best app for <br/> organize your <br/> day...</p>
+                <div class="box-buttons">
+                <h1 class="titleWelcome">JOIN OUR <br/> TEAM</h1>
+                    <button class="btn-form" on onClick={loginClick}>Login</button>
+                    <p class="orText">-------------- or ---------------</p>
+                    <button class="btn-form" on onClick={signupClick}>Sign up</button>
                     <br/>
-                    <button on onClick={signupClick}>
-                        <img src={googleIcon} alt="google-icon" />
+                    <button class="btn-google"on onClick={signupClick}>
+                        <img class="icon-google"src={googleIcon} alt="google-icon" />
                         Continue with Google</button>
                 </div>
-                <Link to={`/users/${userId}`}>Usuarios</Link>
+
             </section>
         </div>
     )

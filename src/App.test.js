@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import LoginPage from './pages/login';
+
+const newLocal = screen.getByPlaceholderText('email@example.com');
 
 test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  render(<LoginPage />);
+  const linkElement = newLocal;
   expect(linkElement).toBeInTheDocument();
 });
