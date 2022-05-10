@@ -1,6 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable linebreak-style */
 import { useEffect, useState } from 'react';
 import {
   collection,

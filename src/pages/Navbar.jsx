@@ -1,9 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable linebreak-style */
-// import { NavLink } from "react-router-dom";
 import './navbar.css';
 import openMenu from '../img/openMenu.png';
 import logoutIcon from '../img/logoutIcon.svg';
@@ -27,7 +21,7 @@ export default function Navbar() {
       </ul>
       <ul>
         <li>
-          <button onClick={handleLogout}>
+          <button type="button" onClick={handleLogout}>
             <img className="icon-nav-logout" src={logoutIcon} alt="logout-icon" />
 
           </button>

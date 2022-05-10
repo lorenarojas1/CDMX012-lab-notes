@@ -1,6 +1,4 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable react/react-in-jsx-scope */
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React, { BrowserRouter, Route, Routes } from 'react-router-dom';
 import WelcomePage from './pages/welcome';
 import SignUpPage from './pages/signup';
 import LoginPage from './pages/login';
