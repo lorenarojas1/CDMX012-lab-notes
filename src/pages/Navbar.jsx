@@ -1,12 +1,9 @@
 import './navbar.css';
 import openMenu from '../img/openMenu.png';
 import logoutIcon from '../img/logoutIcon.svg';
-// import searchIcon from "../img/searchIcon.svg"
-// import {useNavigate } from "react-router-dom";
 import { useAuth } from '../context/authContext';
 
 export default function Navbar() {
-  // const navigate = useNavigate();
   const { logout } = useAuth();
   const handleLogout = async () => {
     await logout();

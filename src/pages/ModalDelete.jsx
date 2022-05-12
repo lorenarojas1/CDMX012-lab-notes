@@ -22,11 +22,9 @@ export function ModalDelete({ openModalDelete, closeModalDelete, currentId }) {
           X
         </button>
         <p className="titleDelete">
-          {' '}
           🗑️
           <br />
           Are you sure you want to delete this note?
-          {' '}
         </p>
         <div data-testid="btns" className="btnsDelete">
           <button
