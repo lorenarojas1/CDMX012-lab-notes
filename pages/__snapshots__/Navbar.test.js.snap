@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test component NavBarBlog render component NavBarBlog 1`] = `null`;
+
+exports[`Test component Navbar render component Navbar 1`] = `null`;

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test component Blog render component Blog 1`] = `null`;
+
+exports[`Test component ModalDelete render component ModalDelete 1`] = `
+    <section className="containerPopup">
+      <div className="containerExtern">
+        <div className="popupBlog">
+          <button
+            type="button"
+            className="btnClosePopup"
+        onClick={[Function]}
+          >
+            X
+          </button>
+          <p className="titleNote">{[Function]}</p>
+          <input
+            className="titleBlog"
+            type="text"
+            placeholder="Title"
+            name="tittle"
+            value={values.tittle}
+        onChange={[Function]}
+          />
+          <textarea
+            className="blogMessage"
+            placeholder="Description"
+            name="message"
+            value={[Function]}
+        onChange={[Function]}
+          />
+          <button
+            type="button"
+            className="btnSaveBlog"
+        onClick={[Function]}
+          >
+            {[Function]}
+          </button>
+        </div>
+      </div>
+    </section>`;

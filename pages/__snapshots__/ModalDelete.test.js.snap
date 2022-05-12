@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test component ModalDelete render component ModalDelete 1`] = `
+<section
+  className="modalDelete"
+>
+  <div
+    className="popupDelete"
+  >
+    <button
+      className="closePopDelete"
+      type="button"
+    >
+      X
+    </button>
+    <p
+      className="titleDelete"
+    >
+      🗑️
+      <br />
+      Are you sure you want to delete this note?
+    </p>
+    <div
+      className="btnsDelete"
+      data-testid="btns"
+    >
+      <button
+        className="btnDelete"
+        id="btnDelete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+      <button
+        className="btnNoDelete"
+        id="cancel"
+        name="btn-cancel"
+        type="button"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</section>
+`;
